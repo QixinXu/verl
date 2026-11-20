@@ -61,7 +61,7 @@ STEPS=6 bash examples/skill_evolve/run_rollout_scripted_cpu.sh \
     skill_evolve.library.embedder=hash skill_evolve.library.merge_threshold=0.6 skill_evolve.library.merge_every=2
 ```
 
-**(c) GRPO 训练**（verl 自己的 vLLM 引擎 + FSDP actor，同卡）。启动脚本已按新配置更新，但这条路径在本次交付里没有运行过：
+**(c) GRPO 训练**（verl 自己的 vLLM 引擎 + FSDP actor，同卡）。启动脚本已按新配置更新，但这条路径没有运行过：
 
 ```bash
 TOTAL_STEPS=60 bash examples/skill_evolve/run_alfworld_skill_grpo.sh

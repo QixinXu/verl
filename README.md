@@ -1,8 +1,8 @@
-> **Skill-based Self-Evolving Agent Training Harness (take-home)**
+> **Skill-based Self-Evolving Agent Training Harness**
 >
-> This branch adds a skill-evolution loop to verl `a4e0dd2` (V1 trainer). Deliverables:
+> This branch adds a skill-evolution loop to verl `a4e0dd2` (V1 trainer).
 >
-> | Deliverable | Where |
+> | Content | Where |
 > |---|---|
 > | Code + one-command rollout | [`verl/experimental/skill_loop/`](verl/experimental/skill_loop/), [`examples/skill_evolve/`](examples/skill_evolve/); how to run: [`docs/skill_evolve/README.md`](docs/skill_evolve/README.md) |
 > | Design doc (benchmark & data, reward & credit assignment, skill mechanism, harness diff) | [`docs/skill_evolve/DESIGN.md`](docs/skill_evolve/DESIGN.md) |
