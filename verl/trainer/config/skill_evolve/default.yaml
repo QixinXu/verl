@@ -1,0 +1,101 @@
+# Skill-based self-evolution (verl.experimental.skill_loop).
+#
+# Load it with `+skill_evolve=default` together with the two class overrides:
+#   +trainer.v1.trainer_class=verl.experimental.skill_loop.skill_trainer.SkillEvolveTrainerSync
+#   +actor_rollout_ref.rollout.agent.agent_loop_manager_class=verl.experimental.skill_loop.skill_loop_tq.SkillLoopManagerTQ
+#
+# One prompt is a training unit (A; B_1..B_m): tasks of one task type, all different.
+#   G = actor_rollout_ref.rollout.n   episodes on the source task A (any of them may write skills)
+#   m = num_checks                    check tasks B_j
+#   M = control_n                     control episodes per check task (old library only): the baseline
+#   K = num_checks * check_n          episodes that test one new skill (old library + the new skill)
+
+# Master switch. When false the worker falls back to the stock per-session agent loop.
+enable: true
+
+# ---- unit layout --------------------------------------------------------------------------
+# Check tasks used per unit (the dataset stores a few; the first `num_checks` are used).
+num_checks: 2
+# Control episodes per check task. Their mean score is that task's baseline, shared by every
+# new skill of the unit.
+control_n: 4
+# Episodes per new skill per check task. The new skill is put straight into the index next to the
+# retrieved ones; loading it is the policy's own decision.
+check_n: 4
+# New skills tested per unit after de-duplication. Skills over the budget get no credit this step.
+max_candidates: 4
+# Episodes per arm per check task when a library skill is re-tested or a merge is judged.
+retest_n: 4
+
+# ---- credit (see verl/experimental/skill_loop/credit.py) ------------------------------------
+# Influence (mean log-prob change of the tokens generated after a loaded body, with vs. without
+# the body) at which an episode counts as having fully used the skill. 0 disables the influence
+# gate: every load counts as full use.
+tau: 0.1
+# Shrinkage: credit = sum u*(r - baseline) / (sum u + kappa).
+kappa: 1.0
+
+# ---- advantage of write_skill tokens ----------------------------------------------------------
+# A_write = write_task_coef * norm(score of A) + write_credit_coef * norm(credit of the skill),
+# each normalized inside the source group. Episodes that wrote nothing enter the credit
+# normalization as credit 0.
+write_credit_coef: 1.0
+write_task_coef: 1.0
+
+# Per-role multiplier of the task-score advantage (roles: source, control, candidate, retest,
+# merge), e.g. {control: 0.5}. Missing roles = 1.
+role_adv_coef: {}
+
+# ---- validation ---------------------------------------------------------------------------
+# Validation retrieves from the frozen library (true) or shows no skills at all (false).
+val_use_skills: true
+
+# ---- skill format -------------------------------------------------------------------------
+# Hard cap on the skill body. Longer outputs are truncated before use, so length buys nothing.
+max_skill_words: 120
+
+# ---- artifacts ----------------------------------------------------------------------------
+# Directory for human-readable unit records (messages, skills, credits, rewards) and per-episode
+# advantages. null disables the dumps.
+dump_dir: null
+
+# Library snapshot (json) to start from, e.g. <default_local_dir>/skill_library/latest.json.
+library_path: null
+
+# ---- agent loop (SkillAgentLoop kwargs) ---------------------------------------------------
+agent:
+  env_module: verl.experimental.skill_loop.envs.alfworld_env
+  env_kwargs:
+    max_steps: 30
+    # never | on_invalid | always: when to list commands that are valid at the current location
+    admissible_hint: on_invalid
+    max_hint: 12
+  # Token cap of one turn. A write_skill turn is the longest one.
+  max_turn_tokens: 256
+  # task score = success * (1 - efficiency_weight * steps / max_steps)
+  efficiency_weight: 0.5
+
+# ---- skill library (SkillLibraryConfig) ---------------------------------------------------
+library:
+  # `hash` (hashed word n-grams, no model) or a Hugging Face sentence-embedding model.
+  embedder: BAAI/bge-small-en-v1.5
+  # N: retrieved skills whose name and when-to-use are put into the prompt.
+  index_size: 4
+  # Admit a new skill when its credit is above this.
+  admit_min_credit: 0.0
+  # Cosine similarity of (when-to-use + procedure) above which two skills count as the same.
+  dedup_threshold: 0.9
+  kappa: ${..kappa}
+  # A skill may be re-tested once this many steps passed since its last measurement.
+  retest_every: 2
+  # Library skills re-tested by one unit (taken from the unit's task type).
+  retest_per_unit: 1
+  # A re-test at or below `delete_credit` is a strike; `delete_strikes` in a row delete the skill.
+  delete_credit: 0.02
+  delete_strikes: 2
+  # Merges are attempted on steps divisible by this (0 = never).
+  merge_every: 4
+  merge_threshold: 0.8
+  merge_max_cluster: 3
+  merge_cooldown: 8
+  max_skills_per_family: 8

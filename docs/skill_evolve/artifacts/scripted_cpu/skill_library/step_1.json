@@ -1,0 +1,186 @@
+{
+  "version": 1,
+  "next_id": 3,
+  "config": {
+    "embedder": "hash",
+    "index_size": 4,
+    "admit_min_credit": 0.0,
+    "dedup_threshold": 0.9,
+    "max_skill_words": 120,
+    "kappa": 1.0,
+    "retest_every": 2,
+    "retest_per_unit": 1,
+    "delete_credit": 0.02,
+    "delete_strikes": 2,
+    "merge_every": 2,
+    "merge_threshold": 0.6,
+    "merge_max_cluster": 3,
+    "merge_cooldown": 8,
+    "max_skills_per_family": 8
+  },
+  "skills": [
+    {
+      "skill_id": "sk0000",
+      "name": "Find, take, place",
+      "when_to_use": "The task is to put an object in or on a receptacle",
+      "procedure": "1. Go to receptacles one at a time; open a closed one before looking inside.\n2. When you see the object, take <object> from <receptacle>.\n3. Go to the target receptacle.\n4. Place it with: move <object> to <receptacle> (the game rejects 'put').",
+      "family": "pick",
+      "source_task_id": "train/pick_and_place_simple-Candle-None-Drawer-411/trial_T20190909_093542_770989",
+      "created_step": 1,
+      "source_task_ids": [
+        "train/pick_and_place_simple-DishSponge-None-Cart-401/trial_T20190909_045729_956116",
+        "train/pick_and_place_simple-Watch-None-CoffeeTable-201/trial_T20190908_124638_700872",
+        "train/pick_and_place_simple-CellPhone-None-SideTable-317/trial_T20190909_234733_582011"
+      ],
+      "verified_step": 1,
+      "utility": 0.107143,
+      "n_loads": 0,
+      "loads_since_verified": 0,
+      "outcome_sum": 0.0,
+      "n_tests": 0,
+      "strikes": 0,
+      "last_merge_try": -1000000000,
+      "status": "active",
+      "removed_reason": "",
+      "merged_from": [],
+      "history": [
+        {
+          "step": 1,
+          "event": "created"
+        }
+      ]
+    },
+    {
+      "skill_id": "sk0001",
+      "name": "Examine under a lamp",
+      "when_to_use": "The task is to look at an object under a lamp",
+      "procedure": "1. Search receptacles until you see the object and take it.\n2. Keep holding it and find a desklamp or floorlamp.\n3. Turn the lamp on with: use <lamp>.",
+      "family": "look",
+      "source_task_id": "train/look_at_obj_in_light-Book-None-DeskLamp-320/trial_T20190909_152445_177541",
+      "created_step": 1,
+      "source_task_ids": [
+        "train/look_at_obj_in_light-Bowl-None-DeskLamp-323/trial_T20190908_024036_061391",
+        "train/look_at_obj_in_light-Laptop-None-DeskLamp-216/trial_T20190907_185526_145194"
+      ],
+      "verified_step": 1,
+      "utility": 0.146429,
+      "n_loads": 0,
+      "loads_since_verified": 0,
+      "outcome_sum": 0.0,
+      "n_tests": 0,
+      "strikes": 0,
+      "last_merge_try": -1000000000,
+      "status": "active",
+      "removed_reason": "",
+      "merged_from": [],
+      "history": [
+        {
+          "step": 1,
+          "event": "created"
+        }
+      ]
+    },
+    {
+      "skill_id": "sk0002",
+      "name": "Examine under a lamp",
+      "when_to_use": "The task is to look at an object under a lamp",
+      "procedure": "1. Search receptacles until you see the object and take it.\n2. Keep holding it and find a desklamp or floorlamp.\n3. Turn the lamp on with: use <lamp>.\n4. If the game rejects a command, read the commands it lists as available and use one of those.",
+      "family": "look",
+      "source_task_id": "train/look_at_obj_in_light-Book-None-DeskLamp-320/trial_T20190909_152445_177541",
+      "created_step": 1,
+      "source_task_ids": [
+        "train/look_at_obj_in_light-Bowl-None-DeskLamp-323/trial_T20190908_024036_061391",
+        "train/look_at_obj_in_light-Laptop-None-DeskLamp-216/trial_T20190907_185526_145194"
+      ],
+      "verified_step": 1,
+      "utility": 0.138889,
+      "n_loads": 0,
+      "loads_since_verified": 0,
+      "outcome_sum": 0.0,
+      "n_tests": 0,
+      "strikes": 0,
+      "last_merge_try": -1000000000,
+      "status": "active",
+      "removed_reason": "",
+      "merged_from": [],
+      "history": [
+        {
+          "step": 1,
+          "event": "created"
+        }
+      ]
+    }
+  ],
+  "commit_log": [
+    {
+      "step": 1,
+      "version": 1,
+      "num_active": 3,
+      "num_total": 3,
+      "mean_utility": 0.13082033333333334,
+      "per_family": {
+        "pick": 1,
+        "look": 2
+      },
+      "proposed": 14,
+      "admitted": 3,
+      "rejected_no_credit": 4,
+      "duplicate_dropped": 7,
+      "events": [
+        {
+          "event": "admit",
+          "skill_id": "sk0000",
+          "name": "Find, take, place",
+          "credit": 0.107
+        },
+        {
+          "event": "admit",
+          "skill_id": "sk0001",
+          "name": "Examine under a lamp",
+          "credit": 0.146
+        },
+        {
+          "event": "admit",
+          "skill_id": "sk0002",
+          "name": "Examine under a lamp",
+          "credit": 0.139
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0002",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0002",
+          "sim": 1.0
+        }
+      ]
+    }
+  ]
+}

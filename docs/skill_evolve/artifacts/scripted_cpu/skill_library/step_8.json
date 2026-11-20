@@ -1,0 +1,995 @@
+{
+  "version": 8,
+  "next_id": 7,
+  "config": {
+    "embedder": "hash",
+    "index_size": 4,
+    "admit_min_credit": 0.0,
+    "dedup_threshold": 0.9,
+    "max_skill_words": 120,
+    "kappa": 1.0,
+    "retest_every": 2,
+    "retest_per_unit": 1,
+    "delete_credit": 0.02,
+    "delete_strikes": 2,
+    "merge_every": 2,
+    "merge_threshold": 0.6,
+    "merge_max_cluster": 3,
+    "merge_cooldown": 8,
+    "max_skills_per_family": 8
+  },
+  "skills": [
+    {
+      "skill_id": "sk0000",
+      "name": "Find, take, place",
+      "when_to_use": "The task is to put an object in or on a receptacle",
+      "procedure": "1. Go to receptacles one at a time; open a closed one before looking inside.\n2. When you see the object, take <object> from <receptacle>.\n3. Go to the target receptacle.\n4. Place it with: move <object> to <receptacle> (the game rejects 'put').",
+      "family": "pick",
+      "source_task_id": "train/pick_and_place_simple-Candle-None-Drawer-411/trial_T20190909_093542_770989",
+      "created_step": 1,
+      "source_task_ids": [
+        "train/pick_and_place_simple-DishSponge-None-Cart-401/trial_T20190909_045729_956116",
+        "train/pick_and_place_simple-Watch-None-CoffeeTable-201/trial_T20190908_124638_700872",
+        "train/pick_and_place_simple-CellPhone-None-SideTable-317/trial_T20190909_234733_582011",
+        "train/pick_and_place_simple-RemoteControl-None-ArmChair-223/trial_T20190908_163710_603458",
+        "train/pick_and_place_simple-ToiletPaper-None-ToiletPaperHanger-423/trial_T20190908_022354_663784",
+        "train/pick_and_place_simple-SoapBottle-None-Toilet-412/trial_T20190908_112135_164068",
+        "train/pick_and_place_simple-Statue-None-Dresser-319/trial_T20190909_122415_877633",
+        "train/pick_and_place_simple-Newspaper-None-Sofa-211/trial_T20190906_175021_859979",
+        "train/pick_and_place_simple-TissueBox-None-Dresser-301/trial_T20190906_221445_679815",
+        "train/pick_and_place_simple-Newspaper-None-ArmChair-212/trial_T20190907_222240_893520",
+        "train/pick_and_place_simple-Pen-None-Shelf-330/trial_T20190908_145416_946403",
+        "train/pick_and_place_simple-TissueBox-None-CoffeeTable-230/trial_T20190907_144841_277298",
+        "train/pick_and_place_simple-Pencil-None-GarbageCan-316/trial_T20190907_165839_449092",
+        "train/pick_and_place_simple-Newspaper-None-Ottoman-203/trial_T20190908_173745_461691",
+        "train/pick_and_place_simple-CellPhone-None-Dresser-330/trial_T20190909_052323_195252",
+        "train/pick_and_place_simple-Box-None-Sofa-220/trial_T20190907_165527_462462",
+        "train/pick_and_place_simple-Cloth-None-CounterTop-414/trial_T20190909_064959_475757",
+        "train/pick_and_place_simple-HandTowel-None-GarbageCan-423/trial_T20190907_025926_506401",
+        "train/pick_and_place_simple-AlarmClock-None-Desk-314/trial_T20190908_185924_234584"
+      ],
+      "verified_step": 8,
+      "utility": 0.14523814285714284,
+      "n_loads": 374,
+      "loads_since_verified": 0,
+      "outcome_sum": 2.110416666666668,
+      "n_tests": 3,
+      "strikes": 0,
+      "last_merge_try": -1000000000,
+      "status": "active",
+      "removed_reason": "",
+      "merged_from": [],
+      "history": [
+        {
+          "step": 1,
+          "event": "created"
+        },
+        {
+          "step": 2,
+          "event": "text_replaced",
+          "old_procedure": "1. Go to receptacles one at a time; open a closed one before looking inside.\n2. When you see the object, take <object> from <receptacle>.\n3. Go to the target receptacle.\n4. Place it with: move <object> to <receptacle> (the game rejects 'put')."
+        },
+        {
+          "step": 4,
+          "event": "retest",
+          "credit": 0.0783
+        },
+        {
+          "step": 4,
+          "event": "text_replaced",
+          "old_procedure": "1. Go to receptacles one at a time; open a closed one before looking inside.\n2. When you see the object, take <object> from <receptacle>.\n3. Go to the target receptacle.\n4. Place it with: move <object> to <receptacle> (the game rejects 'put')."
+        },
+        {
+          "step": 6,
+          "event": "retest",
+          "credit": 0.0319
+        },
+        {
+          "step": 6,
+          "event": "text_replaced",
+          "old_procedure": "1. Go to receptacles one at a time; open a closed one before looking inside.\n2. When you see the object, take <object> from <receptacle>.\n3. Go to the target receptacle.\n4. Place it with: move <object> to <receptacle> (the game rejects 'put')."
+        },
+        {
+          "step": 8,
+          "event": "retest",
+          "credit": 0.1452
+        }
+      ]
+    },
+    {
+      "skill_id": "sk0001",
+      "name": "Examine under a lamp",
+      "when_to_use": "The task is to look at an object under a lamp",
+      "procedure": "1. Search receptacles until you see the object and take it.\n2. Keep holding it and find a desklamp or floorlamp.\n3. Turn the lamp on with: use <lamp>.",
+      "family": "look",
+      "source_task_id": "train/look_at_obj_in_light-Book-None-DeskLamp-320/trial_T20190909_152445_177541",
+      "created_step": 1,
+      "source_task_ids": [
+        "train/look_at_obj_in_light-Bowl-None-DeskLamp-323/trial_T20190908_024036_061391",
+        "train/look_at_obj_in_light-Laptop-None-DeskLamp-216/trial_T20190907_185526_145194",
+        "train/look_at_obj_in_light-Pen-None-DeskLamp-323/trial_T20190908_125522_292336",
+        "train/look_at_obj_in_light-CD-None-DeskLamp-320/trial_T20190907_224439_174735",
+        "train/look_at_obj_in_light-Book-None-DeskLamp-309/trial_T20190907_175916_775742",
+        "train/look_at_obj_in_light-CD-None-DeskLamp-304/trial_T20190907_185606_026765",
+        "train/look_at_obj_in_light-Pillow-None-DeskLamp-307/trial_T20190908_190608_801964",
+        "train/look_at_obj_in_light-Pen-None-DeskLamp-316/trial_T20190908_061814_700195",
+        "train/look_at_obj_in_light-TissueBox-None-DeskLamp-225/trial_T20190906_192828_730493",
+        "train/look_at_obj_in_light-AlarmClock-None-DeskLamp-303/trial_T20190908_145005_617119",
+        "train/look_at_obj_in_light-Book-None-DeskLamp-307/trial_T20190908_062847_269349",
+        "train/look_at_obj_in_light-CellPhone-None-DeskLamp-320/trial_T20190908_093241_795263",
+        "train/look_at_obj_in_light-Watch-None-DeskLamp-205/trial_T20190907_001948_509721",
+        "train/look_at_obj_in_light-Pillow-None-DeskLamp-317/trial_T20190908_234536_917488",
+        "train/look_at_obj_in_light-CellPhone-None-DeskLamp-316/trial_T20190907_075452_465579",
+        "train/look_at_obj_in_light-Statue-None-DeskLamp-216/trial_T20190909_193015_464612"
+      ],
+      "verified_step": 8,
+      "utility": 0.158333,
+      "n_loads": 169,
+      "loads_since_verified": 0,
+      "outcome_sum": 2.2041666666666693,
+      "n_tests": 3,
+      "strikes": 0,
+      "last_merge_try": 2,
+      "status": "active",
+      "removed_reason": "",
+      "merged_from": [],
+      "history": [
+        {
+          "step": 1,
+          "event": "created"
+        },
+        {
+          "step": 3,
+          "event": "retest",
+          "credit": 0.0201
+        },
+        {
+          "step": 4,
+          "event": "text_replaced",
+          "old_procedure": "1. Search receptacles until you see the object and take it.\n2. Keep holding it and find a desklamp or floorlamp.\n3. Turn the lamp on with: use <lamp>."
+        },
+        {
+          "step": 6,
+          "event": "retest",
+          "credit": 0.0104
+        },
+        {
+          "step": 6,
+          "event": "text_replaced",
+          "old_procedure": "1. Search receptacles until you see the object and take it.\n2. Keep holding it and find a desklamp or floorlamp.\n3. Turn the lamp on with: use <lamp>."
+        },
+        {
+          "step": 8,
+          "event": "retest",
+          "credit": 0.0194
+        },
+        {
+          "step": 8,
+          "event": "text_replaced",
+          "old_procedure": "1. Search receptacles until you see the object and take it.\n2. Keep holding it and find a desklamp or floorlamp.\n3. Turn the lamp on with: use <lamp>."
+        }
+      ]
+    },
+    {
+      "skill_id": "sk0002",
+      "name": "Examine under a lamp",
+      "when_to_use": "The task is to look at an object under a lamp",
+      "procedure": "1. Search receptacles until you see the object and take it.\n2. Keep holding it and find a desklamp or floorlamp.\n3. Turn the lamp on with: use <lamp>.\n4. If the game rejects a command, read the commands it lists as available and use one of those.",
+      "family": "look",
+      "source_task_id": "train/look_at_obj_in_light-Book-None-DeskLamp-320/trial_T20190909_152445_177541",
+      "created_step": 1,
+      "source_task_ids": [
+        "train/look_at_obj_in_light-Bowl-None-DeskLamp-323/trial_T20190908_024036_061391",
+        "train/look_at_obj_in_light-Laptop-None-DeskLamp-216/trial_T20190907_185526_145194",
+        "train/look_at_obj_in_light-Pen-None-DeskLamp-323/trial_T20190908_125522_292336",
+        "train/look_at_obj_in_light-Book-None-DeskLamp-309/trial_T20190907_175916_775742",
+        "train/look_at_obj_in_light-CD-None-DeskLamp-304/trial_T20190907_185606_026765",
+        "train/look_at_obj_in_light-Bowl-None-DeskLamp-304/trial_T20190907_232217_890241",
+        "train/look_at_obj_in_light-Pillow-None-DeskLamp-307/trial_T20190908_190608_801964",
+        "train/look_at_obj_in_light-TissueBox-None-DeskLamp-225/trial_T20190906_192828_730493",
+        "train/look_at_obj_in_light-AlarmClock-None-DeskLamp-303/trial_T20190908_145005_617119",
+        "train/look_at_obj_in_light-Book-None-DeskLamp-307/trial_T20190908_062847_269349",
+        "train/look_at_obj_in_light-AlarmClock-None-DeskLamp-305/trial_T20190908_082736_108723",
+        "train/look_at_obj_in_light-Watch-None-DeskLamp-205/trial_T20190907_001948_509721",
+        "train/look_at_obj_in_light-Statue-None-DeskLamp-216/trial_T20190909_193015_464612"
+      ],
+      "verified_step": 8,
+      "utility": 0.01875,
+      "n_loads": 170,
+      "loads_since_verified": 0,
+      "outcome_sum": 0.016666666666668273,
+      "n_tests": 3,
+      "strikes": 1,
+      "last_merge_try": 2,
+      "status": "active",
+      "removed_reason": "",
+      "merged_from": [],
+      "history": [
+        {
+          "step": 1,
+          "event": "created"
+        },
+        {
+          "step": 3,
+          "event": "retest",
+          "credit": 0.001
+        },
+        {
+          "step": 3,
+          "event": "text_replaced",
+          "old_procedure": "1. Search receptacles until you see the object and take it.\n2. Keep holding it and find a desklamp or floorlamp.\n3. Turn the lamp on with: use <lamp>.\n4. If the game rejects a command, read the commands it lists as available and use one of those."
+        },
+        {
+          "step": 3,
+          "event": "text_replaced",
+          "old_procedure": "1. Search receptacles until you see the object and take it.\n2. Keep holding it and find a desklamp or floorlamp.\n3. Turn the lamp on with: use <lamp>.\n4. If the game rejects a command, read the commands it lists as available and use one of those."
+        },
+        {
+          "step": 4,
+          "event": "text_replaced",
+          "old_procedure": "1. Search receptacles until you see the object and take it.\n2. Keep holding it and find a desklamp or floorlamp.\n3. Turn the lamp on with: use <lamp>.\n4. If the game rejects a command, read the commands it lists as available and use one of those."
+        },
+        {
+          "step": 4,
+          "event": "text_replaced",
+          "old_procedure": "1. Search receptacles until you see the object and take it.\n2. Keep holding it and find a desklamp or floorlamp.\n3. Turn the lamp on with: use <lamp>.\n4. If the game rejects a command, read the commands it lists as available and use one of those."
+        },
+        {
+          "step": 6,
+          "event": "retest",
+          "credit": 0.0111
+        },
+        {
+          "step": 6,
+          "event": "text_replaced",
+          "old_procedure": "1. Search receptacles until you see the object and take it.\n2. Keep holding it and find a desklamp or floorlamp.\n3. Turn the lamp on with: use <lamp>.\n4. If the game rejects a command, read the commands it lists as available and use one of those."
+        },
+        {
+          "step": 8,
+          "event": "retest",
+          "credit": 0.0187
+        }
+      ]
+    },
+    {
+      "skill_id": "sk0003",
+      "name": "Heat with the microwave, then place",
+      "when_to_use": "The task is to heat an object and put it somewhere",
+      "procedure": "1. Search receptacles until you see the object and take it.\n2. Go to the microwave (the stove burners cannot heat).\n3. Use: heat <object> with microwave.\n4. Go to the target receptacle and use: move <object> to <receptacle>.",
+      "family": "heat",
+      "source_task_id": "train/pick_heat_then_place_in_recep-Tomato-None-SideTable-28/trial_T20190908_031531_364896",
+      "created_step": 5,
+      "source_task_ids": [
+        "train/pick_heat_then_place_in_recep-Cup-None-Cabinet-6/trial_T20190908_165456_939103",
+        "train/pick_heat_then_place_in_recep-Cup-None-Cabinet-3/trial_T20190908_233045_285903"
+      ],
+      "verified_step": 7,
+      "utility": 0.002083,
+      "n_loads": 31,
+      "loads_since_verified": 8,
+      "outcome_sum": -0.9249999999999996,
+      "n_tests": 1,
+      "strikes": 0,
+      "last_merge_try": -1000000000,
+      "status": "active",
+      "removed_reason": "",
+      "merged_from": [],
+      "history": [
+        {
+          "step": 5,
+          "event": "created"
+        },
+        {
+          "step": 7,
+          "event": "retest",
+          "credit": 0.0
+        },
+        {
+          "step": 7,
+          "event": "text_replaced",
+          "old_procedure": "1. Search receptacles until you see the object and take it.\n2. Go to the microwave (the stove burners cannot heat).\n3. Use: heat <object> with microwave.\n4. Go to the target receptacle and use: move <object> to <receptacle>."
+        }
+      ]
+    },
+    {
+      "skill_id": "sk0004",
+      "name": "Heat with the microwave, then place",
+      "when_to_use": "The task is to heat an object and put it somewhere",
+      "procedure": "1. Search receptacles until you see the object and take it.\n2. Go to the microwave (the stove burners cannot heat).\n3. Use: heat <object> with microwave.\n4. Go to the target receptacle and use: move <object> to <receptacle>.\n5. If the game rejects a command, read the commands it lists as available and use one of those.",
+      "family": "heat",
+      "source_task_id": "train/pick_heat_then_place_in_recep-Tomato-None-SideTable-28/trial_T20190908_031531_364896",
+      "created_step": 5,
+      "source_task_ids": [
+        "train/pick_heat_then_place_in_recep-Cup-None-Cabinet-6/trial_T20190908_165456_939103",
+        "train/pick_heat_then_place_in_recep-Cup-None-Cabinet-3/trial_T20190908_233045_285903"
+      ],
+      "verified_step": 7,
+      "utility": 0.052083333333333336,
+      "n_loads": 34,
+      "loads_since_verified": 3,
+      "outcome_sum": 0.660416666666667,
+      "n_tests": 1,
+      "strikes": 0,
+      "last_merge_try": -1000000000,
+      "status": "active",
+      "removed_reason": "",
+      "merged_from": [],
+      "history": [
+        {
+          "step": 5,
+          "event": "created"
+        },
+        {
+          "step": 7,
+          "event": "retest",
+          "credit": 0.0521
+        }
+      ]
+    },
+    {
+      "skill_id": "sk0005",
+      "name": "Clean at the sink basin, then place",
+      "when_to_use": "The task is to clean an object and put it somewhere",
+      "procedure": "1. Search receptacles until you see the object and take it.\n2. Go to the sinkbasin and use: clean <object> with sinkbasin.\n3. Go to the target receptacle and use: move <object> to <receptacle>.\n4. If the game rejects a command, read the commands it lists as available and use one of those.",
+      "family": "clean",
+      "source_task_id": "train/pick_clean_then_place_in_recep-Spoon-None-DiningTable-20/trial_T20190909_034703_947964",
+      "created_step": 5,
+      "source_task_ids": [
+        "train/pick_clean_then_place_in_recep-Ladle-None-Cabinet-16/trial_T20190907_052726_618967",
+        "train/pick_clean_then_place_in_recep-Plate-None-CounterTop-19/trial_T20190908_212756_405192",
+        "train/pick_clean_then_place_in_recep-Potato-None-Fridge-17/trial_T20190909_135724_571540"
+      ],
+      "verified_step": 7,
+      "utility": 0.011111,
+      "n_loads": 27,
+      "loads_since_verified": 2,
+      "outcome_sum": -0.035416666666667096,
+      "n_tests": 1,
+      "strikes": 0,
+      "last_merge_try": -1000000000,
+      "status": "active",
+      "removed_reason": "",
+      "merged_from": [],
+      "history": [
+        {
+          "step": 5,
+          "event": "created"
+        },
+        {
+          "step": 7,
+          "event": "retest",
+          "credit": 0.0083
+        },
+        {
+          "step": 7,
+          "event": "text_replaced",
+          "old_procedure": "1. Search receptacles until you see the object and take it.\n2. Go to the sinkbasin and use: clean <object> with sinkbasin.\n3. Go to the target receptacle and use: move <object> to <receptacle>.\n4. If the game rejects a command, read the commands it lists as available and use one of those."
+        }
+      ]
+    },
+    {
+      "skill_id": "sk0006",
+      "name": "Clean at the sink basin, then place",
+      "when_to_use": "The task is to clean an object and put it somewhere",
+      "procedure": "1. Search receptacles until you see the object and take it.\n2. Go to the sinkbasin and use: clean <object> with sinkbasin.\n3. Go to the target receptacle and use: move <object> to <receptacle>.",
+      "family": "clean",
+      "source_task_id": "train/pick_clean_then_place_in_recep-Spoon-None-DiningTable-20/trial_T20190909_034703_947964",
+      "created_step": 5,
+      "source_task_ids": [
+        "train/pick_clean_then_place_in_recep-Ladle-None-Cabinet-16/trial_T20190907_052726_618967",
+        "train/pick_clean_then_place_in_recep-Plate-None-CounterTop-19/trial_T20190908_212756_405192",
+        "train/pick_clean_then_place_in_recep-Potato-None-Fridge-17/trial_T20190909_135724_571540"
+      ],
+      "verified_step": 7,
+      "utility": 0.011111,
+      "n_loads": 22,
+      "loads_since_verified": 4,
+      "outcome_sum": 0.09583333333333366,
+      "n_tests": 1,
+      "strikes": 0,
+      "last_merge_try": -1000000000,
+      "status": "active",
+      "removed_reason": "",
+      "merged_from": [],
+      "history": [
+        {
+          "step": 5,
+          "event": "created"
+        },
+        {
+          "step": 7,
+          "event": "retest",
+          "credit": 0.0
+        },
+        {
+          "step": 7,
+          "event": "text_replaced",
+          "old_procedure": "1. Search receptacles until you see the object and take it.\n2. Go to the sinkbasin and use: clean <object> with sinkbasin.\n3. Go to the target receptacle and use: move <object> to <receptacle>."
+        },
+        {
+          "step": 7,
+          "event": "text_replaced",
+          "old_procedure": "1. Search receptacles until you see the object and take it.\n2. Go to the sinkbasin and use: clean <object> with sinkbasin.\n3. Go to the target receptacle and use: move <object> to <receptacle>."
+        }
+      ]
+    }
+  ],
+  "commit_log": [
+    {
+      "step": 1,
+      "version": 1,
+      "num_active": 3,
+      "num_total": 3,
+      "mean_utility": 0.13082033333333334,
+      "per_family": {
+        "pick": 1,
+        "look": 2
+      },
+      "proposed": 14,
+      "admitted": 3,
+      "rejected_no_credit": 4,
+      "duplicate_dropped": 7,
+      "events": [
+        {
+          "event": "admit",
+          "skill_id": "sk0000",
+          "name": "Find, take, place",
+          "credit": 0.107
+        },
+        {
+          "event": "admit",
+          "skill_id": "sk0001",
+          "name": "Examine under a lamp",
+          "credit": 0.146
+        },
+        {
+          "event": "admit",
+          "skill_id": "sk0002",
+          "name": "Examine under a lamp",
+          "credit": 0.139
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0002",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0002",
+          "sim": 1.0
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "version": 2,
+      "num_active": 3,
+      "num_total": 3,
+      "mean_utility": 0.13468933333333333,
+      "per_family": {
+        "pick": 1,
+        "look": 2
+      },
+      "loads": 122,
+      "merge_rejected": 1,
+      "proposed": 17,
+      "duplicate_dropped": 8,
+      "rejected_no_credit": 8,
+      "duplicate_replaced": 1,
+      "events": [
+        {
+          "event": "merge_rejected",
+          "members": [
+            "sk0001",
+            "sk0002"
+          ],
+          "merged_credit": 0.0302,
+          "members_credit": 0.0357
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 0.904
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0002",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 0.904
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0000",
+          "credit": 0.119
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0002",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "version": 3,
+      "num_active": 3,
+      "num_total": 3,
+      "mean_utility": 0.053240611111111114,
+      "per_family": {
+        "pick": 1,
+        "look": 2
+      },
+      "loads": 125,
+      "retested": 2,
+      "proposed": 15,
+      "duplicate_dropped": 5,
+      "rejected_no_credit": 8,
+      "duplicate_replaced": 2,
+      "events": [
+        {
+          "event": "retest",
+          "skill_id": "sk0001",
+          "credit": 0.0201,
+          "strikes": 0
+        },
+        {
+          "event": "retest",
+          "skill_id": "sk0002",
+          "credit": 0.001,
+          "strikes": 1
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 0.904
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0002",
+          "credit": 0.011
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0002",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0002",
+          "credit": 0.021
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 1.0
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "version": 4,
+      "num_active": 3,
+      "num_total": 3,
+      "mean_utility": 0.140162,
+      "per_family": {
+        "pick": 1,
+        "look": 2
+      },
+      "loads": 122,
+      "retested": 1,
+      "proposed": 19,
+      "duplicate_dropped": 7,
+      "rejected_no_credit": 8,
+      "duplicate_replaced": 4,
+      "events": [
+        {
+          "event": "retest",
+          "skill_id": "sk0000",
+          "credit": 0.0783,
+          "strikes": 0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0002",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0000",
+          "credit": 0.161
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0002",
+          "credit": 0.125
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0001",
+          "credit": 0.117
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0002",
+          "credit": 0.143
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "version": 5,
+      "num_active": 7,
+      "num_total": 7,
+      "mean_utility": 0.09408314285714285,
+      "per_family": {
+        "pick": 1,
+        "look": 2,
+        "heat": 2,
+        "clean": 2
+      },
+      "loads": 101,
+      "proposed": 18,
+      "admitted": 4,
+      "rejected_no_credit": 10,
+      "duplicate_dropped": 4,
+      "events": [
+        {
+          "event": "admit",
+          "skill_id": "sk0003",
+          "name": "Heat with the microwave, then place",
+          "credit": 0.061
+        },
+        {
+          "event": "admit",
+          "skill_id": "sk0004",
+          "name": "Heat with the microwave, then place",
+          "credit": 0.059
+        },
+        {
+          "event": "admit",
+          "skill_id": "sk0005",
+          "name": "Clean at the sink basin, then place",
+          "credit": 0.062
+        },
+        {
+          "event": "admit",
+          "skill_id": "sk0006",
+          "name": "Clean at the sink basin, then place",
+          "credit": 0.056
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0004",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0003",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0006",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0005",
+          "sim": 1.0
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "version": 6,
+      "num_active": 7,
+      "num_total": 7,
+      "mean_utility": 0.061097,
+      "per_family": {
+        "pick": 1,
+        "look": 2,
+        "heat": 2,
+        "clean": 2
+      },
+      "loads": 119,
+      "retested": 3,
+      "proposed": 15,
+      "duplicate_replaced": 3,
+      "duplicate_dropped": 4,
+      "rejected_no_credit": 8,
+      "events": [
+        {
+          "event": "retest",
+          "skill_id": "sk0001",
+          "credit": 0.0104,
+          "strikes": 1
+        },
+        {
+          "event": "retest",
+          "skill_id": "sk0002",
+          "credit": 0.0111,
+          "strikes": 1
+        },
+        {
+          "event": "retest",
+          "skill_id": "sk0000",
+          "credit": 0.0319,
+          "strikes": 0
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0000",
+          "credit": 0.047
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0001",
+          "credit": 0.019
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0002",
+          "credit": 0.123
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 0.904
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0002",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        }
+      ]
+    },
+    {
+      "step": 7,
+      "version": 7,
+      "num_active": 7,
+      "num_total": 7,
+      "mean_utility": 0.037995904761904765,
+      "per_family": {
+        "pick": 1,
+        "look": 2,
+        "heat": 2,
+        "clean": 2
+      },
+      "loads": 117,
+      "retested": 4,
+      "proposed": 12,
+      "duplicate_dropped": 2,
+      "duplicate_replaced": 4,
+      "rejected_no_credit": 6,
+      "events": [
+        {
+          "event": "retest",
+          "skill_id": "sk0005",
+          "credit": 0.0083,
+          "strikes": 1
+        },
+        {
+          "event": "retest",
+          "skill_id": "sk0006",
+          "credit": 0.0,
+          "strikes": 1
+        },
+        {
+          "event": "retest",
+          "skill_id": "sk0004",
+          "credit": 0.0521,
+          "strikes": 0
+        },
+        {
+          "event": "retest",
+          "skill_id": "sk0003",
+          "credit": 0.0,
+          "strikes": 1
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0005",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0006",
+          "credit": 0.006
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0006",
+          "credit": 0.011
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0005",
+          "credit": 0.011
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0003",
+          "credit": 0.002
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0004",
+          "sim": 1.0
+        }
+      ]
+    },
+    {
+      "step": 8,
+      "version": 8,
+      "num_active": 7,
+      "num_total": 7,
+      "mean_utility": 0.056958496598639455,
+      "per_family": {
+        "pick": 1,
+        "look": 2,
+        "heat": 2,
+        "clean": 2
+      },
+      "loads": 121,
+      "retested": 3,
+      "proposed": 19,
+      "duplicate_dropped": 6,
+      "rejected_no_credit": 12,
+      "duplicate_replaced": 1,
+      "events": [
+        {
+          "event": "retest",
+          "skill_id": "sk0002",
+          "credit": 0.0187,
+          "strikes": 1
+        },
+        {
+          "event": "retest",
+          "skill_id": "sk0001",
+          "credit": 0.0194,
+          "strikes": 1
+        },
+        {
+          "event": "retest",
+          "skill_id": "sk0000",
+          "credit": 0.1452,
+          "strikes": 0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0001",
+          "credit": 0.158
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0002",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 1.0
+        }
+      ]
+    }
+  ]
+}

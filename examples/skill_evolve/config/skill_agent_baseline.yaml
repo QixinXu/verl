@@ -1,0 +1,11 @@
+# Registers SkillAgentLoop with the STOCK agent loop worker (no skill loop): one episode per
+# session, no library, task reward only. This is the no-skill GRPO baseline.
+- name: skill_agent
+  _target_: verl.experimental.skill_loop.skill_agent_loop.SkillAgentLoop
+  env_module: verl.experimental.skill_loop.envs.alfworld_env
+  env_kwargs:
+    max_steps: 30
+    admissible_hint: on_invalid
+    max_hint: 12
+  max_turn_tokens: 96
+  efficiency_weight: 0.5

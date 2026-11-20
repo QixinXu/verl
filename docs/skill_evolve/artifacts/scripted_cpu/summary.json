@@ -1,0 +1,940 @@
+{
+  "steps": [
+    {
+      "step": 1,
+      "skill/source_score_mean": 0.718,
+      "skill/source_success": 0.8906,
+      "skill/source_rows": 64.0,
+      "skill/source_load_frac": 0.0,
+      "skill/control_score_mean": 0.7661,
+      "skill/control_success": 0.9219,
+      "skill/control_rows": 64.0,
+      "skill/control_load_frac": 0.0,
+      "skill/candidate_score_mean": 0.8247,
+      "skill/candidate_success": 0.9554,
+      "skill/candidate_rows": 112.0,
+      "skill/candidate_load_frac": 0.9107,
+      "skill/write_frac": 0.6719,
+      "skill/write_credit_mean": 0.0639,
+      "skill/write_credit_pos_frac": 0.814,
+      "skill/candidate_loaded_frac": 0.9107,
+      "skill/candidate_usage_weight": 0.6066,
+      "skill/candidate_influence": 0.2564,
+      "skill/usage_weight_corr_steps": -0.4066,
+      "skill/usage_weight_corr_score": 0.3504,
+      "skill/candidate_lift": 0.0527,
+      "rows": 240.0,
+      "library": {
+        "step": 1,
+        "version": 1,
+        "num_active": 3,
+        "num_total": 3,
+        "mean_utility": 0.13082033333333334,
+        "proposed": 14,
+        "admitted": 3,
+        "rejected_no_credit": 4,
+        "duplicate_dropped": 7,
+        "per_family": {
+          "pick": 1,
+          "look": 2
+        }
+      },
+      "library_events": [
+        {
+          "event": "admit",
+          "skill_id": "sk0000",
+          "name": "Find, take, place",
+          "credit": 0.107
+        },
+        {
+          "event": "admit",
+          "skill_id": "sk0001",
+          "name": "Examine under a lamp",
+          "credit": 0.146
+        },
+        {
+          "event": "admit",
+          "skill_id": "sk0002",
+          "name": "Examine under a lamp",
+          "credit": 0.139
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0002",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0002",
+          "sim": 1.0
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "skill/source_score_mean": 0.8349,
+      "skill/source_success": 0.9844,
+      "skill/source_rows": 64.0,
+      "skill/source_load_frac": 0.9844,
+      "skill/control_score_mean": 0.8096,
+      "skill/control_success": 0.9531,
+      "skill/control_rows": 64.0,
+      "skill/control_load_frac": 0.9219,
+      "skill/candidate_score_mean": 0.8241,
+      "skill/candidate_success": 0.9632,
+      "skill/candidate_rows": 136.0,
+      "skill/candidate_load_frac": 0.9485,
+      "skill/merge_score_mean": 0.8424,
+      "skill/merge_success": 0.9583,
+      "skill/merge_rows": 24.0,
+      "skill/merge_load_frac": 0.9583,
+      "skill/write_frac": 0.6719,
+      "skill/write_credit_mean": 0.0283,
+      "skill/write_credit_pos_frac": 0.6512,
+      "skill/candidate_loaded_frac": 0.2426,
+      "skill/candidate_usage_weight": 0.8182,
+      "skill/candidate_influence": 0.4603,
+      "skill/usage_weight_corr_steps": -0.4533,
+      "skill/usage_weight_corr_score": 0.4533,
+      "skill/candidate_lift": 0.0166,
+      "rows": 288.0,
+      "library": {
+        "step": 2,
+        "version": 2,
+        "num_active": 3,
+        "num_total": 3,
+        "mean_utility": 0.13468933333333333,
+        "loads": 122,
+        "merge_rejected": 1,
+        "proposed": 17,
+        "duplicate_dropped": 8,
+        "rejected_no_credit": 8,
+        "duplicate_replaced": 1,
+        "per_family": {
+          "pick": 1,
+          "look": 2
+        }
+      },
+      "library_events": [
+        {
+          "event": "merge_rejected",
+          "members": [
+            "sk0001",
+            "sk0002"
+          ],
+          "merged_credit": 0.0302,
+          "members_credit": 0.0357
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 0.904
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0002",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 0.904
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0000",
+          "credit": 0.119
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0002",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "skill/source_score_mean": 0.663,
+      "skill/source_success": 0.8125,
+      "skill/source_rows": 64.0,
+      "skill/source_load_frac": 0.9688,
+      "skill/control_score_mean": 0.8172,
+      "skill/control_success": 0.9375,
+      "skill/control_rows": 64.0,
+      "skill/control_load_frac": 0.9844,
+      "skill/candidate_score_mean": 0.7692,
+      "skill/candidate_success": 0.8917,
+      "skill/candidate_rows": 120.0,
+      "skill/candidate_load_frac": 0.9667,
+      "skill/retest_score_mean": 0.8875,
+      "skill/retest_success": 1.0,
+      "skill/retest_rows": 16.0,
+      "skill/retest_load_frac": 0.9375,
+      "skill/write_frac": 0.5781,
+      "skill/write_credit_mean": 0.0061,
+      "skill/write_credit_pos_frac": 0.4865,
+      "skill/candidate_loaded_frac": 0.225,
+      "skill/candidate_usage_weight": 0.6296,
+      "skill/candidate_influence": 0.2361,
+      "skill/usage_weight_corr_steps": -0.534,
+      "skill/usage_weight_corr_score": 0.534,
+      "skill/candidate_lift": -0.0462,
+      "rows": 264.0,
+      "library": {
+        "step": 3,
+        "version": 3,
+        "num_active": 3,
+        "num_total": 3,
+        "mean_utility": 0.053240611111111114,
+        "loads": 125,
+        "retested": 2,
+        "proposed": 15,
+        "duplicate_dropped": 5,
+        "rejected_no_credit": 8,
+        "duplicate_replaced": 2,
+        "per_family": {
+          "pick": 1,
+          "look": 2
+        }
+      },
+      "library_events": [
+        {
+          "event": "retest",
+          "skill_id": "sk0001",
+          "credit": 0.0201,
+          "strikes": 0
+        },
+        {
+          "event": "retest",
+          "skill_id": "sk0002",
+          "credit": 0.001,
+          "strikes": 1
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 0.904
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0002",
+          "credit": 0.011
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0002",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0002",
+          "credit": 0.021
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 1.0
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "skill/source_score_mean": 0.8495,
+      "skill/source_success": 1.0,
+      "skill/source_rows": 64.0,
+      "skill/source_load_frac": 0.9844,
+      "skill/control_score_mean": 0.7292,
+      "skill/control_success": 0.875,
+      "skill/control_rows": 64.0,
+      "skill/control_load_frac": 0.9219,
+      "skill/candidate_score_mean": 0.7987,
+      "skill/candidate_success": 0.9408,
+      "skill/candidate_rows": 152.0,
+      "skill/candidate_load_frac": 0.9737,
+      "skill/retest_score_mean": 0.6667,
+      "skill/retest_success": 0.875,
+      "skill/retest_rows": 8.0,
+      "skill/retest_load_frac": 0.75,
+      "skill/write_frac": 0.6875,
+      "skill/write_credit_mean": 0.0517,
+      "skill/write_credit_pos_frac": 0.7045,
+      "skill/candidate_loaded_frac": 0.2895,
+      "skill/candidate_usage_weight": 0.75,
+      "skill/candidate_influence": 0.4046,
+      "skill/usage_weight_corr_steps": -0.4686,
+      "skill/usage_weight_corr_score": 0.451,
+      "skill/candidate_lift": 0.0691,
+      "rows": 288.0,
+      "library": {
+        "step": 4,
+        "version": 4,
+        "num_active": 3,
+        "num_total": 3,
+        "mean_utility": 0.140162,
+        "loads": 122,
+        "retested": 1,
+        "proposed": 19,
+        "duplicate_dropped": 7,
+        "rejected_no_credit": 8,
+        "duplicate_replaced": 4,
+        "per_family": {
+          "pick": 1,
+          "look": 2
+        }
+      },
+      "library_events": [
+        {
+          "event": "retest",
+          "skill_id": "sk0000",
+          "credit": 0.0783,
+          "strikes": 0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0002",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0000",
+          "credit": 0.161
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0002",
+          "credit": 0.125
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0001",
+          "credit": 0.117
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0002",
+          "credit": 0.143
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "skill/source_score_mean": 0.5398,
+      "skill/source_success": 0.7344,
+      "skill/source_rows": 64.0,
+      "skill/source_load_frac": 0.7031,
+      "skill/control_score_mean": 0.3935,
+      "skill/control_success": 0.5,
+      "skill/control_rows": 64.0,
+      "skill/control_load_frac": 0.875,
+      "skill/candidate_score_mean": 0.4014,
+      "skill/candidate_success": 0.5,
+      "skill/candidate_rows": 144.0,
+      "skill/candidate_load_frac": 0.8889,
+      "skill/write_frac": 0.5781,
+      "skill/write_credit_mean": 0.0141,
+      "skill/write_credit_pos_frac": 0.3265,
+      "skill/candidate_loaded_frac": 0.3194,
+      "skill/candidate_usage_weight": 0.6957,
+      "skill/candidate_influence": 0.3585,
+      "skill/usage_weight_corr_steps": -0.5815,
+      "skill/usage_weight_corr_score": 0.5021,
+      "skill/candidate_lift": 0.0122,
+      "rows": 272.0,
+      "library": {
+        "step": 5,
+        "version": 5,
+        "num_active": 7,
+        "num_total": 7,
+        "mean_utility": 0.09408314285714285,
+        "loads": 101,
+        "proposed": 18,
+        "admitted": 4,
+        "rejected_no_credit": 10,
+        "duplicate_dropped": 4,
+        "per_family": {
+          "pick": 1,
+          "look": 2,
+          "heat": 2,
+          "clean": 2
+        }
+      },
+      "library_events": [
+        {
+          "event": "admit",
+          "skill_id": "sk0003",
+          "name": "Heat with the microwave, then place",
+          "credit": 0.061
+        },
+        {
+          "event": "admit",
+          "skill_id": "sk0004",
+          "name": "Heat with the microwave, then place",
+          "credit": 0.059
+        },
+        {
+          "event": "admit",
+          "skill_id": "sk0005",
+          "name": "Clean at the sink basin, then place",
+          "credit": 0.062
+        },
+        {
+          "event": "admit",
+          "skill_id": "sk0006",
+          "name": "Clean at the sink basin, then place",
+          "credit": 0.056
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0004",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0003",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0006",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0005",
+          "sim": 1.0
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "skill/source_score_mean": 0.8211,
+      "skill/source_success": 0.9844,
+      "skill/source_rows": 64.0,
+      "skill/source_load_frac": 0.9062,
+      "skill/control_score_mean": 0.7984,
+      "skill/control_success": 0.9375,
+      "skill/control_rows": 64.0,
+      "skill/control_load_frac": 0.9531,
+      "skill/candidate_score_mean": 0.8538,
+      "skill/candidate_success": 0.9917,
+      "skill/candidate_rows": 120.0,
+      "skill/candidate_load_frac": 0.9667,
+      "skill/retest_score_mean": 0.8667,
+      "skill/retest_success": 1.0,
+      "skill/retest_rows": 24.0,
+      "skill/retest_load_frac": 0.9167,
+      "skill/write_frac": 0.7031,
+      "skill/write_credit_mean": 0.0306,
+      "skill/write_credit_pos_frac": 0.5778,
+      "skill/candidate_loaded_frac": 0.2,
+      "skill/candidate_usage_weight": 0.7083,
+      "skill/candidate_influence": 0.246,
+      "skill/usage_weight_corr_steps": -0.3802,
+      "skill/usage_weight_corr_score": 0.3802,
+      "skill/candidate_lift": 0.0557,
+      "rows": 272.0,
+      "library": {
+        "step": 6,
+        "version": 6,
+        "num_active": 7,
+        "num_total": 7,
+        "mean_utility": 0.061097,
+        "loads": 119,
+        "retested": 3,
+        "proposed": 15,
+        "duplicate_replaced": 3,
+        "duplicate_dropped": 4,
+        "rejected_no_credit": 8,
+        "per_family": {
+          "pick": 1,
+          "look": 2,
+          "heat": 2,
+          "clean": 2
+        }
+      },
+      "library_events": [
+        {
+          "event": "retest",
+          "skill_id": "sk0001",
+          "credit": 0.0104,
+          "strikes": 1
+        },
+        {
+          "event": "retest",
+          "skill_id": "sk0002",
+          "credit": 0.0111,
+          "strikes": 1
+        },
+        {
+          "event": "retest",
+          "skill_id": "sk0000",
+          "credit": 0.0319,
+          "strikes": 0
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0000",
+          "credit": 0.047
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0001",
+          "credit": 0.019
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0002",
+          "credit": 0.123
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 0.904
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0002",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        }
+      ]
+    },
+    {
+      "step": 7,
+      "skill/source_score_mean": 0.3823,
+      "skill/source_success": 0.4844,
+      "skill/source_rows": 64.0,
+      "skill/source_load_frac": 0.9688,
+      "skill/control_score_mean": 0.5109,
+      "skill/control_success": 0.6094,
+      "skill/control_rows": 64.0,
+      "skill/control_load_frac": 0.8594,
+      "skill/candidate_score_mean": 0.4925,
+      "skill/candidate_success": 0.5833,
+      "skill/candidate_rows": 96.0,
+      "skill/candidate_load_frac": 0.9167,
+      "skill/retest_score_mean": 0.5208,
+      "skill/retest_success": 0.625,
+      "skill/retest_rows": 32.0,
+      "skill/retest_load_frac": 0.9062,
+      "skill/write_frac": 0.4375,
+      "skill/write_credit_mean": 0.0035,
+      "skill/write_credit_pos_frac": 0.5366,
+      "skill/candidate_loaded_frac": 0.125,
+      "skill/candidate_usage_weight": 0.6667,
+      "skill/candidate_influence": 0.2631,
+      "skill/usage_weight_corr_steps": -0.8297,
+      "skill/usage_weight_corr_score": 0.7323,
+      "skill/candidate_lift": -0.0127,
+      "rows": 256.0,
+      "library": {
+        "step": 7,
+        "version": 7,
+        "num_active": 7,
+        "num_total": 7,
+        "mean_utility": 0.037995904761904765,
+        "loads": 117,
+        "retested": 4,
+        "proposed": 12,
+        "duplicate_dropped": 2,
+        "duplicate_replaced": 4,
+        "rejected_no_credit": 6,
+        "per_family": {
+          "pick": 1,
+          "look": 2,
+          "heat": 2,
+          "clean": 2
+        }
+      },
+      "library_events": [
+        {
+          "event": "retest",
+          "skill_id": "sk0005",
+          "credit": 0.0083,
+          "strikes": 1
+        },
+        {
+          "event": "retest",
+          "skill_id": "sk0006",
+          "credit": 0.0,
+          "strikes": 1
+        },
+        {
+          "event": "retest",
+          "skill_id": "sk0004",
+          "credit": 0.0521,
+          "strikes": 0
+        },
+        {
+          "event": "retest",
+          "skill_id": "sk0003",
+          "credit": 0.0,
+          "strikes": 1
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0005",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0006",
+          "credit": 0.006
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0006",
+          "credit": 0.011
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0005",
+          "credit": 0.011
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0003",
+          "credit": 0.002
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0004",
+          "sim": 1.0
+        }
+      ]
+    },
+    {
+      "step": 8,
+      "skill/source_score_mean": 0.8104,
+      "skill/source_success": 1.0,
+      "skill/source_rows": 64.0,
+      "skill/source_load_frac": 0.9219,
+      "skill/control_score_mean": 0.8396,
+      "skill/control_success": 0.9688,
+      "skill/control_rows": 64.0,
+      "skill/control_load_frac": 0.9688,
+      "skill/candidate_score_mean": 0.7988,
+      "skill/candidate_success": 0.9211,
+      "skill/candidate_rows": 152.0,
+      "skill/candidate_load_frac": 0.9408,
+      "skill/retest_score_mean": 0.8118,
+      "skill/retest_success": 0.9583,
+      "skill/retest_rows": 24.0,
+      "skill/retest_load_frac": 0.9167,
+      "skill/write_frac": 0.7188,
+      "skill/write_credit_mean": 0.0216,
+      "skill/write_credit_pos_frac": 0.4783,
+      "skill/candidate_loaded_frac": 0.2105,
+      "skill/candidate_usage_weight": 0.75,
+      "skill/candidate_influence": 0.3706,
+      "skill/usage_weight_corr_steps": -0.5889,
+      "skill/usage_weight_corr_score": 0.5284,
+      "skill/candidate_lift": -0.0391,
+      "rows": 304.0,
+      "library": {
+        "step": 8,
+        "version": 8,
+        "num_active": 7,
+        "num_total": 7,
+        "mean_utility": 0.056958496598639455,
+        "loads": 121,
+        "retested": 3,
+        "proposed": 19,
+        "duplicate_dropped": 6,
+        "rejected_no_credit": 12,
+        "duplicate_replaced": 1,
+        "per_family": {
+          "pick": 1,
+          "look": 2,
+          "heat": 2,
+          "clean": 2
+        }
+      },
+      "library_events": [
+        {
+          "event": "retest",
+          "skill_id": "sk0002",
+          "credit": 0.0187,
+          "strikes": 1
+        },
+        {
+          "event": "retest",
+          "skill_id": "sk0001",
+          "credit": 0.0194,
+          "strikes": 1
+        },
+        {
+          "event": "retest",
+          "skill_id": "sk0000",
+          "credit": 0.1452,
+          "strikes": 0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0001",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_replaced",
+          "skill_id": "sk0001",
+          "credit": 0.158
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0002",
+          "sim": 1.0
+        },
+        {
+          "event": "duplicate_dropped",
+          "skill_id": "sk0000",
+          "sim": 1.0
+        }
+      ]
+    }
+  ],
+  "val_before": {
+    "val/alfworld/val_heldout/cool/reward": 0.2812500074505806,
+    "val/alfworld/val_heldout/pick2/reward": 0.3062499985098839,
+    "val/alfworld/val_seen/clean/reward": 0.19583334028720856,
+    "val/alfworld/val_seen/heat/reward": 0.18124999850988388,
+    "val/alfworld/val_seen/look/reward": 0.7291666641831398,
+    "val/alfworld/val_seen/pick/reward": 0.7958333268761635,
+    "val/alfworld/val_unseen/clean/reward": 0.4124999940395355,
+    "val/alfworld/val_unseen/heat/reward": 0.33541666716337204,
+    "val/alfworld/val_unseen/look/reward": 0.741666667163372,
+    "val/alfworld/val_unseen/pick/reward": 0.625,
+    "val/all/reward": 0.46041666641831397,
+    "val/alfworld/val_heldout/cool/success": 0.375,
+    "val/alfworld/val_heldout/pick2/success": 0.5,
+    "val/alfworld/val_seen/clean/success": 0.25,
+    "val/alfworld/val_seen/heat/success": 0.25,
+    "val/alfworld/val_seen/look/success": 0.875,
+    "val/alfworld/val_seen/pick/success": 1.0,
+    "val/alfworld/val_unseen/clean/success": 0.625,
+    "val/alfworld/val_unseen/heat/success": 0.5,
+    "val/alfworld/val_unseen/look/success": 0.875,
+    "val/alfworld/val_unseen/pick/success": 0.75,
+    "val/all/success": 0.6,
+    "val/alfworld/val_heldout/cool/steps": 24.375,
+    "val/alfworld/val_heldout/pick2/steps": 26.625,
+    "val/alfworld/val_seen/clean/steps": 25.75,
+    "val/alfworld/val_seen/heat/steps": 26.625,
+    "val/alfworld/val_seen/look/steps": 12.5,
+    "val/alfworld/val_seen/pick/steps": 12.25,
+    "val/alfworld/val_unseen/clean/steps": 24.0,
+    "val/alfworld/val_unseen/heat/steps": 24.875,
+    "val/alfworld/val_unseen/look/steps": 11.75,
+    "val/alfworld/val_unseen/pick/steps": 15.0,
+    "val/all/steps": 20.375,
+    "val/alfworld/val_heldout/cool/index_size": 0.0,
+    "val/alfworld/val_heldout/pick2/index_size": 0.0,
+    "val/alfworld/val_seen/clean/index_size": 0.0,
+    "val/alfworld/val_seen/heat/index_size": 0.0,
+    "val/alfworld/val_seen/look/index_size": 0.0,
+    "val/alfworld/val_seen/pick/index_size": 0.0,
+    "val/alfworld/val_unseen/clean/index_size": 0.0,
+    "val/alfworld/val_unseen/heat/index_size": 0.0,
+    "val/alfworld/val_unseen/look/index_size": 0.0,
+    "val/alfworld/val_unseen/pick/index_size": 0.0,
+    "val/all/index_size": 0.0,
+    "val/alfworld/val_heldout/cool/loaded_skill": 0.0,
+    "val/alfworld/val_heldout/pick2/loaded_skill": 0.0,
+    "val/alfworld/val_seen/clean/loaded_skill": 0.0,
+    "val/alfworld/val_seen/heat/loaded_skill": 0.0,
+    "val/alfworld/val_seen/look/loaded_skill": 0.0,
+    "val/alfworld/val_seen/pick/loaded_skill": 0.0,
+    "val/alfworld/val_unseen/clean/loaded_skill": 0.0,
+    "val/alfworld/val_unseen/heat/loaded_skill": 0.0,
+    "val/alfworld/val_unseen/look/loaded_skill": 0.0,
+    "val/alfworld/val_unseen/pick/loaded_skill": 0.0,
+    "val/all/loaded_skill": 0.0,
+    "val/alfworld/val_heldout/cool/invalid_actions": 2.125,
+    "val/alfworld/val_heldout/pick2/invalid_actions": 4.875,
+    "val/alfworld/val_seen/clean/invalid_actions": 1.5,
+    "val/alfworld/val_seen/heat/invalid_actions": 2.0,
+    "val/alfworld/val_seen/look/invalid_actions": 1.875,
+    "val/alfworld/val_seen/pick/invalid_actions": 3.25,
+    "val/alfworld/val_unseen/clean/invalid_actions": 2.25,
+    "val/alfworld/val_unseen/heat/invalid_actions": 2.125,
+    "val/alfworld/val_unseen/look/invalid_actions": 2.125,
+    "val/alfworld/val_unseen/pick/invalid_actions": 2.625,
+    "val/all/invalid_actions": 2.475
+  },
+  "val_after": {
+    "val/alfworld/val_heldout/cool/reward": 0.27916666865348816,
+    "val/alfworld/val_heldout/pick2/reward": 0.3645833358168602,
+    "val/alfworld/val_seen/clean/reward": 0.16874999552965164,
+    "val/alfworld/val_seen/heat/reward": 0.31041666865348816,
+    "val/alfworld/val_seen/look/reward": 0.7375000044703484,
+    "val/alfworld/val_seen/pick/reward": 0.8604166805744171,
+    "val/alfworld/val_unseen/clean/reward": 0.4583333358168602,
+    "val/alfworld/val_unseen/heat/reward": 0.3958333358168602,
+    "val/alfworld/val_unseen/look/reward": 0.7604166716337204,
+    "val/alfworld/val_unseen/pick/reward": 0.8499999940395355,
+    "val/all/reward": 0.518541669100523,
+    "val/alfworld/val_heldout/cool/success": 0.375,
+    "val/alfworld/val_heldout/pick2/success": 0.5,
+    "val/alfworld/val_seen/clean/success": 0.25,
+    "val/alfworld/val_seen/heat/success": 0.375,
+    "val/alfworld/val_seen/look/success": 0.875,
+    "val/alfworld/val_seen/pick/success": 1.0,
+    "val/alfworld/val_unseen/clean/success": 0.625,
+    "val/alfworld/val_unseen/heat/success": 0.5,
+    "val/alfworld/val_unseen/look/success": 0.875,
+    "val/alfworld/val_unseen/pick/success": 1.0,
+    "val/all/success": 0.6375,
+    "val/alfworld/val_heldout/cool/steps": 24.5,
+    "val/alfworld/val_heldout/pick2/steps": 23.125,
+    "val/alfworld/val_seen/clean/steps": 27.375,
+    "val/alfworld/val_seen/heat/steps": 22.625,
+    "val/alfworld/val_seen/look/steps": 12.0,
+    "val/alfworld/val_seen/pick/steps": 8.375,
+    "val/alfworld/val_unseen/clean/steps": 21.25,
+    "val/alfworld/val_unseen/heat/steps": 21.25,
+    "val/alfworld/val_unseen/look/steps": 10.625,
+    "val/alfworld/val_unseen/pick/steps": 9.0,
+    "val/all/steps": 18.0125,
+    "val/alfworld/val_heldout/cool/index_size": 4.0,
+    "val/alfworld/val_heldout/pick2/index_size": 4.0,
+    "val/alfworld/val_seen/clean/index_size": 4.0,
+    "val/alfworld/val_seen/heat/index_size": 4.0,
+    "val/alfworld/val_seen/look/index_size": 4.0,
+    "val/alfworld/val_seen/pick/index_size": 4.0,
+    "val/alfworld/val_unseen/clean/index_size": 4.0,
+    "val/alfworld/val_unseen/heat/index_size": 4.0,
+    "val/alfworld/val_unseen/look/index_size": 4.0,
+    "val/alfworld/val_unseen/pick/index_size": 4.0,
+    "val/all/index_size": 4.0,
+    "val/alfworld/val_heldout/cool/loaded_skill": 0.75,
+    "val/alfworld/val_heldout/pick2/loaded_skill": 1.0,
+    "val/alfworld/val_seen/clean/loaded_skill": 1.0,
+    "val/alfworld/val_seen/heat/loaded_skill": 1.0,
+    "val/alfworld/val_seen/look/loaded_skill": 0.75,
+    "val/alfworld/val_seen/pick/loaded_skill": 1.0,
+    "val/alfworld/val_unseen/clean/loaded_skill": 0.75,
+    "val/alfworld/val_unseen/heat/loaded_skill": 0.875,
+    "val/alfworld/val_unseen/look/loaded_skill": 0.875,
+    "val/alfworld/val_unseen/pick/loaded_skill": 1.0,
+    "val/all/loaded_skill": 0.9,
+    "val/alfworld/val_heldout/cool/invalid_actions": 0.625,
+    "val/alfworld/val_heldout/pick2/invalid_actions": 4.25,
+    "val/alfworld/val_seen/clean/invalid_actions": 1.5,
+    "val/alfworld/val_seen/heat/invalid_actions": 1.25,
+    "val/alfworld/val_seen/look/invalid_actions": 1.25,
+    "val/alfworld/val_seen/pick/invalid_actions": 0.875,
+    "val/alfworld/val_unseen/clean/invalid_actions": 0.0,
+    "val/alfworld/val_unseen/heat/invalid_actions": 1.25,
+    "val/alfworld/val_unseen/look/invalid_actions": 1.0,
+    "val/alfworld/val_unseen/pick/invalid_actions": 0.75,
+    "val/all/invalid_actions": 1.275
+  }
+}

@@ -1,0 +1,262 @@
+{
+  "steps": [
+    {
+      "step": 1,
+      "skill/source_score_mean": 0.7438,
+      "skill/source_success": 0.9375,
+      "skill/source_rows": 32.0,
+      "skill/source_load_frac": 0.0,
+      "skill/control_score_mean": 0.5771,
+      "skill/control_success": 0.7188,
+      "skill/control_rows": 32.0,
+      "skill/control_load_frac": 0.0,
+      "skill/candidate_score_mean": 0.5725,
+      "skill/candidate_success": 0.7031,
+      "skill/candidate_rows": 128.0,
+      "skill/candidate_load_frac": 0.0703,
+      "skill/write_frac": 0.9062,
+      "skill/write_credit_mean": 0.0056,
+      "skill/write_credit_pos_frac": 0.125,
+      "skill/candidate_loaded_frac": 0.0703,
+      "skill/candidate_usage_weight": 0.6779,
+      "skill/candidate_influence": 0.0678,
+      "skill/usage_weight_corr_steps": -0.0284,
+      "skill/usage_weight_corr_score": 0.1928,
+      "skill/candidate_lift": -0.0046,
+      "rows": 192.0,
+      "library": {
+        "step": 1,
+        "version": 1,
+        "num_active": 2,
+        "num_total": 2,
+        "mean_utility": 0.0800285,
+        "proposed": 16,
+        "rejected_no_credit": 14,
+        "admitted": 2,
+        "per_family": {
+          "pick": 2
+        }
+      },
+      "library_events": [
+        {
+          "event": "admit",
+          "skill_id": "sk0000",
+          "name": "Find object in drawer",
+          "credit": 0.094
+        },
+        {
+          "event": "admit",
+          "skill_id": "sk0001",
+          "name": "Drawer Search",
+          "credit": 0.066
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "skill/source_score_mean": 0.3146,
+      "skill/source_success": 0.4375,
+      "skill/source_rows": 32.0,
+      "skill/source_load_frac": 0.0312,
+      "skill/control_score_mean": 0.1135,
+      "skill/control_success": 0.1562,
+      "skill/control_rows": 32.0,
+      "skill/control_load_frac": 0.1875,
+      "skill/candidate_score_mean": 0.2277,
+      "skill/candidate_success": 0.3,
+      "skill/candidate_rows": 80.0,
+      "skill/candidate_load_frac": 0.275,
+      "skill/write_frac": 0.4062,
+      "skill/write_credit_mean": 0.076,
+      "skill/write_credit_pos_frac": 0.4286,
+      "skill/candidate_loaded_frac": 0.1625,
+      "skill/candidate_usage_weight": 0.5864,
+      "skill/candidate_influence": 0.0984,
+      "skill/usage_weight_corr_steps": 0.1742,
+      "skill/usage_weight_corr_score": -0.1188,
+      "skill/candidate_lift": 0.1247,
+      "rows": 144.0,
+      "library": {
+        "step": 2,
+        "version": 2,
+        "num_active": 6,
+        "num_total": 6,
+        "mean_utility": 0.14382799999999998,
+        "loads": 7,
+        "proposed": 10,
+        "admitted": 4,
+        "rejected_no_credit": 6,
+        "per_family": {
+          "pick": 2,
+          "look": 4
+        }
+      },
+      "library_events": [
+        {
+          "event": "admit",
+          "skill_id": "sk0002",
+          "name": "Examine Laptop with Desk Lamp",
+          "credit": 0.323
+        },
+        {
+          "event": "admit",
+          "skill_id": "sk0003",
+          "name": "Find pen on desk",
+          "credit": 0.038
+        },
+        {
+          "event": "admit",
+          "skill_id": "sk0004",
+          "name": "Examine Object with Tool",
+          "credit": 0.267
+        },
+        {
+          "event": "admit",
+          "skill_id": "sk0005",
+          "name": "Bowl and Desklamp Association",
+          "credit": 0.075
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "skill/source_score_mean": 0.6224,
+      "skill/source_success": 0.8438,
+      "skill/source_rows": 32.0,
+      "skill/source_load_frac": 0.1562,
+      "skill/control_score_mean": 0.5161,
+      "skill/control_success": 0.6562,
+      "skill/control_rows": 32.0,
+      "skill/control_load_frac": 0.1875,
+      "skill/candidate_score_mean": 0.4909,
+      "skill/candidate_success": 0.625,
+      "skill/candidate_rows": 104.0,
+      "skill/candidate_load_frac": 0.1538,
+      "skill/retest_score_mean": 0.424,
+      "skill/retest_success": 0.5,
+      "skill/retest_rows": 16.0,
+      "skill/retest_load_frac": 0.0,
+      "skill/write_frac": 0.7812,
+      "skill/write_credit_mean": 0.0009,
+      "skill/write_credit_pos_frac": 0.0417,
+      "skill/candidate_loaded_frac": 0.0096,
+      "skill/candidate_usage_weight": 0.3472,
+      "skill/candidate_influence": 0.0347,
+      "skill/candidate_lift": -0.0122,
+      "rows": 184.0,
+      "library": {
+        "step": 3,
+        "version": 3,
+        "num_active": 7,
+        "num_total": 7,
+        "mean_utility": 0.10363699999999999,
+        "loads": 11,
+        "retested": 2,
+        "proposed": 13,
+        "rejected_no_credit": 12,
+        "admitted": 1,
+        "per_family": {
+          "pick": 3,
+          "look": 4
+        }
+      },
+      "library_events": [
+        {
+          "event": "retest",
+          "skill_id": "sk0000",
+          "credit": 0.0,
+          "strikes": 1
+        },
+        {
+          "event": "retest",
+          "skill_id": "sk0001",
+          "credit": 0.0,
+          "strikes": 1
+        },
+        {
+          "event": "admit",
+          "skill_id": "sk0006",
+          "name": "Find and place object on furniture",
+          "credit": 0.023
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "skill/source_score_mean": 0.2026,
+      "skill/source_success": 0.2812,
+      "skill/source_rows": 32.0,
+      "skill/source_load_frac": 0.5,
+      "skill/control_score_mean": 0.1901,
+      "skill/control_success": 0.25,
+      "skill/control_rows": 32.0,
+      "skill/control_load_frac": 0.4375,
+      "skill/candidate_score_mean": 0.2264,
+      "skill/candidate_success": 0.3125,
+      "skill/candidate_rows": 48.0,
+      "skill/candidate_load_frac": 0.25,
+      "skill/retest_score_mean": 0.2005,
+      "skill/retest_success": 0.25,
+      "skill/retest_rows": 32.0,
+      "skill/retest_load_frac": 0.3125,
+      "skill/write_frac": 0.25,
+      "skill/write_credit_mean": 0.0074,
+      "skill/write_credit_pos_frac": 0.1111,
+      "skill/candidate_loaded_frac": 0.0625,
+      "skill/candidate_usage_weight": 0.6314,
+      "skill/candidate_influence": 0.0784,
+      "skill/usage_weight_corr_steps": -0.7618,
+      "skill/usage_weight_corr_score": 0.7618,
+      "skill/candidate_lift": 0.0219,
+      "rows": 144.0,
+      "library": {
+        "step": 4,
+        "version": 4,
+        "num_active": 8,
+        "num_total": 8,
+        "mean_utility": -0.034692409309535197,
+        "loads": 32,
+        "retested": 4,
+        "proposed": 6,
+        "rejected_no_credit": 5,
+        "admitted": 1,
+        "per_family": {
+          "pick": 3,
+          "look": 5
+        }
+      },
+      "library_events": [
+        {
+          "event": "retest",
+          "skill_id": "sk0004",
+          "credit": -0.1889,
+          "strikes": 1
+        },
+        {
+          "event": "retest",
+          "skill_id": "sk0005",
+          "credit": -0.1378,
+          "strikes": 1
+        },
+        {
+          "event": "retest",
+          "skill_id": "sk0003",
+          "credit": -0.0401,
+          "strikes": 1
+        },
+        {
+          "event": "retest",
+          "skill_id": "sk0002",
+          "credit": 0.0,
+          "strikes": 1
+        },
+        {
+          "event": "admit",
+          "skill_id": "sk0007",
+          "name": "Look for Book Under Desklamp",
+          "credit": 0.067
+        }
+      ]
+    }
+  ]
+}

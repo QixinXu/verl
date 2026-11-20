@@ -1,0 +1,423 @@
+{
+  "version": 4,
+  "next_id": 8,
+  "config": {
+    "embedder": "BAAI/bge-small-en-v1.5",
+    "index_size": 4,
+    "admit_min_credit": 0.0,
+    "dedup_threshold": 0.9,
+    "max_skill_words": 120,
+    "kappa": 1.0,
+    "retest_every": 2,
+    "retest_per_unit": 1,
+    "delete_credit": 0.02,
+    "delete_strikes": 2,
+    "merge_every": 2,
+    "merge_threshold": 0.8,
+    "merge_max_cluster": 3,
+    "merge_cooldown": 8,
+    "max_skills_per_family": 8
+  },
+  "skills": [
+    {
+      "skill_id": "sk0000",
+      "name": "Find object in drawer",
+      "when_to_use": "You need to find a specific object hidden in one of several drawers and move it elsewhere.",
+      "procedure": "1. Start at the first drawer and open it to check.\n2. If the object isn't there, move to the next drawer and open it.\n3. Repeat until you find the object in a drawer.\n4. Take the object from the drawer where it was found.\n5. Go to the target receptacle and move the object there.\nNote: Be systematic by checking drawers in order to avoid missing the object.\nAction: done",
+      "family": "pick",
+      "source_task_id": "train/pick_and_place_simple-CellPhone-None-SideTable-317/trial_T20190909_234733_582011",
+      "created_step": 1,
+      "source_task_ids": [],
+      "verified_step": 3,
+      "utility": 0.0,
+      "n_loads": 1,
+      "loads_since_verified": 0,
+      "outcome_sum": 0.0,
+      "n_tests": 1,
+      "strikes": 1,
+      "last_merge_try": -1000000000,
+      "status": "active",
+      "removed_reason": "",
+      "merged_from": [],
+      "history": [
+        {
+          "step": 1,
+          "event": "created"
+        },
+        {
+          "step": 3,
+          "event": "retest",
+          "credit": 0.0
+        }
+      ]
+    },
+    {
+      "skill_id": "sk0001",
+      "name": "Drawer Search",
+      "when_to_use": "When you need to find an item inside a set of drawers.",
+      "procedure": "1. Go to the first drawer.\n2. Open the drawer.\n3. If the item is found, take it. If empty, close or leave open for next inspection.\n4. Move to the next drawer and repeat until the item is found.\n5. Once the item is found, move to the target receptacle.\n6. Place the item on the target receptacle.",
+      "family": "pick",
+      "source_task_id": "train/pick_and_place_simple-CellPhone-None-SideTable-317/trial_T20190909_234733_582011",
+      "created_step": 1,
+      "source_task_ids": [],
+      "verified_step": 3,
+      "utility": 0.0,
+      "n_loads": 20,
+      "loads_since_verified": 3,
+      "outcome_sum": -1.6104166666666666,
+      "n_tests": 1,
+      "strikes": 1,
+      "last_merge_try": -1000000000,
+      "status": "active",
+      "removed_reason": "",
+      "merged_from": [],
+      "history": [
+        {
+          "step": 1,
+          "event": "created"
+        },
+        {
+          "step": 3,
+          "event": "retest",
+          "credit": 0.0
+        }
+      ]
+    },
+    {
+      "skill_id": "sk0002",
+      "name": "Examine Laptop with Desk Lamp",
+      "when_to_use": "When you need to examine a laptop using a desk lamp in the same room.",
+      "procedure": "1. Go to the location of the laptop.\n2. Take the laptop from that location.\n3. Go to the location of the desk lamp.\n4. Move the laptop to the desk lamp or place it on the same surface.\n5. Use the desk lamp at the new location to illuminate the laptop.\n6. Examine the laptop if needed.\nNote: Ensure both objects are accessible at their respective locations before moving.\n\nAction: done",
+      "family": "look",
+      "source_task_id": "train/look_at_obj_in_light-Laptop-None-DeskLamp-216/trial_T20190907_185526_145194",
+      "created_step": 2,
+      "source_task_ids": [],
+      "verified_step": 4,
+      "utility": 0.0,
+      "n_loads": 3,
+      "loads_since_verified": 0,
+      "outcome_sum": 0.4958333333333333,
+      "n_tests": 1,
+      "strikes": 1,
+      "last_merge_try": -1000000000,
+      "status": "active",
+      "removed_reason": "",
+      "merged_from": [],
+      "history": [
+        {
+          "step": 2,
+          "event": "created"
+        },
+        {
+          "step": 4,
+          "event": "retest",
+          "credit": 0.0
+        }
+      ]
+    },
+    {
+      "skill_id": "sk0003",
+      "name": "Find pen on desk",
+      "when_to_use": "When you need to find a pen on a desk.",
+      "procedure": "1. Go to the desk where the pen is located.\n2. Examine the desk to see the pen.\n3. If the pen",
+      "family": "look",
+      "source_task_id": "train/look_at_obj_in_light-Pen-None-DeskLamp-320/trial_T20190908_111544_109631",
+      "created_step": 2,
+      "source_task_ids": [],
+      "verified_step": 4,
+      "utility": -0.04013148090588982,
+      "n_loads": 14,
+      "loads_since_verified": 0,
+      "outcome_sum": -0.7499999999999999,
+      "n_tests": 1,
+      "strikes": 1,
+      "last_merge_try": -1000000000,
+      "status": "active",
+      "removed_reason": "",
+      "merged_from": [],
+      "history": [
+        {
+          "step": 2,
+          "event": "created"
+        },
+        {
+          "step": 4,
+          "event": "retest",
+          "credit": -0.0401
+        }
+      ]
+    },
+    {
+      "skill_id": "sk0004",
+      "name": "Examine Object with Tool",
+      "when_to_use": "When you need to examine an object on a surface with a tool (like a lamp) that didn't reveal anything when used directly on the surface.",
+      "procedure": "1. Move to the desk or surface holding both the object and the tool.\n2. Use the tool (e.g., turn on desklamp) if needed to illuminate the area.\n3. Take the object from the surface.\n4. Examine the object while holding it or with the tool nearby if required by the task.\nCommon mistake: Trying to examine the object directly without moving it first; recovery: move the object first, then examine.",
+      "family": "look",
+      "source_task_id": "train/look_at_obj_in_light-Bowl-None-DeskLamp-323/trial_T20190908_024036_061391",
+      "created_step": 2,
+      "source_task_ids": [],
+      "verified_step": 4,
+      "utility": -0.18891207637573748,
+      "n_loads": 2,
+      "loads_since_verified": 0,
+      "outcome_sum": 0.0,
+      "n_tests": 1,
+      "strikes": 1,
+      "last_merge_try": -1000000000,
+      "status": "active",
+      "removed_reason": "",
+      "merged_from": [],
+      "history": [
+        {
+          "step": 2,
+          "event": "created"
+        },
+        {
+          "step": 4,
+          "event": "retest",
+          "credit": -0.1889
+        }
+      ]
+    },
+    {
+      "skill_id": "sk0005",
+      "name": "Bowl and Desklamp Association",
+      "when_to_use": "When you need to identify which bowl is associated with a desklamp on the same desk.",
+      "procedure": "1. Stand at the desk where both the bowl and desklamp are.\n2. Examine the desklamp and the bowls on the desk.\n3. Move to a neighboring desk or area.\n4. Examine any bowls found there.\n5. If a bowl is associated with the desklamp, take it.\n6. If no bowl is associated, leave it and continue searching for the relevant bowl.\n7. Note any patterns or similarities observed between desklamps and bowls.\n8. Repeat the process as needed.\n9. If a bowl is found, examine it closely.\n10. If it's the associated bowl, note its",
+      "family": "look",
+      "source_task_id": "train/look_at_obj_in_light-Bowl-None-DeskLamp-323/trial_T20190908_024036_061391",
+      "created_step": 2,
+      "source_task_ids": [],
+      "verified_step": 4,
+      "utility": -0.13783971719465427,
+      "n_loads": 10,
+      "loads_since_verified": 0,
+      "outcome_sum": -1.0375,
+      "n_tests": 1,
+      "strikes": 1,
+      "last_merge_try": -1000000000,
+      "status": "active",
+      "removed_reason": "",
+      "merged_from": [],
+      "history": [
+        {
+          "step": 2,
+          "event": "created"
+        },
+        {
+          "step": 4,
+          "event": "retest",
+          "credit": -0.1378
+        }
+      ]
+    },
+    {
+      "skill_id": "sk0006",
+      "name": "Find and place object on furniture",
+      "when_to_use": "When you need to find an object (like a remote) among furniture and place it on a specific piece of furniture (like an armchair).",
+      "procedure": "1. Examine each piece of furniture until you find the target object.\n2. If found, take the object.\n3. Go to the target furniture.\n4. Move the object to the target furniture.\n5. If the target furniture is already occupied, you may need to move the existing item first, but for simple placement, just move the new item there.\n\nThought: The task is done, so I can reply with `Action: done`.",
+      "family": "pick",
+      "source_task_id": "train/pick_and_place_simple-RemoteControl-None-ArmChair-223/trial_T20190908_163710_603458",
+      "created_step": 3,
+      "source_task_ids": [],
+      "verified_step": 3,
+      "utility": 0.022548,
+      "n_loads": 0,
+      "loads_since_verified": 0,
+      "outcome_sum": 0.0,
+      "n_tests": 0,
+      "strikes": 0,
+      "last_merge_try": -1000000000,
+      "status": "active",
+      "removed_reason": "",
+      "merged_from": [],
+      "history": [
+        {
+          "step": 3,
+          "event": "created"
+        }
+      ]
+    },
+    {
+      "skill_id": "sk0007",
+      "name": "Look for Book Under Desklamp",
+      "when_to_use": "When you need to locate a book positioned under or near a desklamp on a sidetable or desk.",
+      "procedure": "1. Go to the desk or sidetable with the desklamp.\n2. Examine the desklamp and observe the nearby objects (e.g., book).\n3. Turn on the desklamp using the \"use desklamp\" command.\n4. If the book is visible, examine it or simply consider the task done if the condition (book under lamp) is met by proximity.\n5. If the book is not in position, move it closer to the lamp using \"take from surface\" and place temporarily near the lamp base.\nRecovery: If the",
+      "family": "look",
+      "source_task_id": "train/look_at_obj_in_light-Book-None-DeskLamp-309/trial_T20190907_175916_775742",
+      "created_step": 4,
+      "source_task_ids": [],
+      "verified_step": 4,
+      "utility": 0.066796,
+      "n_loads": 0,
+      "loads_since_verified": 0,
+      "outcome_sum": 0.0,
+      "n_tests": 0,
+      "strikes": 0,
+      "last_merge_try": -1000000000,
+      "status": "active",
+      "removed_reason": "",
+      "merged_from": [],
+      "history": [
+        {
+          "step": 4,
+          "event": "created"
+        }
+      ]
+    }
+  ],
+  "commit_log": [
+    {
+      "step": 1,
+      "version": 1,
+      "num_active": 2,
+      "num_total": 2,
+      "mean_utility": 0.0800285,
+      "per_family": {
+        "pick": 2
+      },
+      "proposed": 16,
+      "rejected_no_credit": 14,
+      "admitted": 2,
+      "events": [
+        {
+          "event": "admit",
+          "skill_id": "sk0000",
+          "name": "Find object in drawer",
+          "credit": 0.094
+        },
+        {
+          "event": "admit",
+          "skill_id": "sk0001",
+          "name": "Drawer Search",
+          "credit": 0.066
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "version": 2,
+      "num_active": 6,
+      "num_total": 6,
+      "mean_utility": 0.14382799999999998,
+      "per_family": {
+        "pick": 2,
+        "look": 4
+      },
+      "loads": 7,
+      "proposed": 10,
+      "admitted": 4,
+      "rejected_no_credit": 6,
+      "events": [
+        {
+          "event": "admit",
+          "skill_id": "sk0002",
+          "name": "Examine Laptop with Desk Lamp",
+          "credit": 0.323
+        },
+        {
+          "event": "admit",
+          "skill_id": "sk0003",
+          "name": "Find pen on desk",
+          "credit": 0.038
+        },
+        {
+          "event": "admit",
+          "skill_id": "sk0004",
+          "name": "Examine Object with Tool",
+          "credit": 0.267
+        },
+        {
+          "event": "admit",
+          "skill_id": "sk0005",
+          "name": "Bowl and Desklamp Association",
+          "credit": 0.075
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "version": 3,
+      "num_active": 7,
+      "num_total": 7,
+      "mean_utility": 0.10363699999999999,
+      "per_family": {
+        "pick": 3,
+        "look": 4
+      },
+      "loads": 11,
+      "retested": 2,
+      "proposed": 13,
+      "rejected_no_credit": 12,
+      "admitted": 1,
+      "events": [
+        {
+          "event": "retest",
+          "skill_id": "sk0000",
+          "credit": 0.0,
+          "strikes": 1
+        },
+        {
+          "event": "retest",
+          "skill_id": "sk0001",
+          "credit": 0.0,
+          "strikes": 1
+        },
+        {
+          "event": "admit",
+          "skill_id": "sk0006",
+          "name": "Find and place object on furniture",
+          "credit": 0.023
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "version": 4,
+      "num_active": 8,
+      "num_total": 8,
+      "mean_utility": -0.034692409309535197,
+      "per_family": {
+        "pick": 3,
+        "look": 5
+      },
+      "loads": 32,
+      "retested": 4,
+      "proposed": 6,
+      "rejected_no_credit": 5,
+      "admitted": 1,
+      "events": [
+        {
+          "event": "retest",
+          "skill_id": "sk0004",
+          "credit": -0.1889,
+          "strikes": 1
+        },
+        {
+          "event": "retest",
+          "skill_id": "sk0005",
+          "credit": -0.1378,
+          "strikes": 1
+        },
+        {
+          "event": "retest",
+          "skill_id": "sk0003",
+          "credit": -0.0401,
+          "strikes": 1
+        },
+        {
+          "event": "retest",
+          "skill_id": "sk0002",
+          "credit": 0.0,
+          "strikes": 1
+        },
+        {
+          "event": "admit",
+          "skill_id": "sk0007",
+          "name": "Look for Book Under Desklamp",
+          "credit": 0.067
+        }
+      ]
+    }
+  ]
+}

@@ -1,3 +1,16 @@
+> **Skill-based Self-Evolving Agent Training Harness (take-home)**
+>
+> This branch adds a skill-evolution loop to verl `a4e0dd2` (V1 trainer). Deliverables:
+>
+> | Deliverable | Where |
+> |---|---|
+> | Code + one-command rollout | [`verl/experimental/skill_loop/`](verl/experimental/skill_loop/), [`examples/skill_evolve/`](examples/skill_evolve/); how to run: [`docs/skill_evolve/README.md`](docs/skill_evolve/README.md) |
+> | Design doc (benchmark & data, reward & credit assignment, skill mechanism, harness diff) | [`docs/skill_evolve/DESIGN.md`](docs/skill_evolve/DESIGN.md) |
+> | Rollout trajectories with rewards | [`docs/skill_evolve/artifacts/`](docs/skill_evolve/artifacts/), described in [`VALIDATION.md`](docs/skill_evolve/VALIDATION.md) |
+> | Reflection (shortcomings, scale, improvements) | [`docs/skill_evolve/REFLECTION.md`](docs/skill_evolve/REFLECTION.md) |
+>
+> Changes to existing verl files are one commit (3 files, +45/−14); everything else is new files.
+
 <div align="center">
  👋 Hi, everyone!
     verl is a RL training library initiated by <b>ByteDance Seed team</b> and maintained by the verl community.
