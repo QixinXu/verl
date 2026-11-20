@@ -154,7 +154,14 @@ class TaskRunnerV1:
 
         from verl.trainer.ppo.v1 import get_trainer_cls
 
-        trainer_cls = get_trainer_cls(config.trainer.v1.trainer_mode)
+        # NOTE: `trainer.v1.trainer_mode` selects the built-in sync/async behaviour. A recipe that
+        # only customizes hooks of one of those modes (e.g. verl.experimental.skill_loop) keeps the
+        # mode and swaps the class: `+trainer.v1.trainer_class=my_package.module.MyTrainer`.
+        trainer_class_fqn = config.trainer.v1.get("trainer_class")
+        if trainer_class_fqn:
+            trainer_cls = load_class_from_fqn(trainer_class_fqn, "PPOTrainer")
+        else:
+            trainer_cls = get_trainer_cls(config.trainer.v1.trainer_mode)
 
         config.transfer_queue.enable = True
         pprint(OmegaConf.to_container(config, resolve=True))

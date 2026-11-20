@@ -1921,16 +1921,7 @@ class PPOTrainer(ABC):
             metrics.update(is_metrics)
 
         # 3. compute advantages
-        data = compute_advantage_for_multi_trajectories(
-            data,
-            batch_keys=batch.keys,
-            adv_estimator=self.config.algorithm.adv_estimator,
-            gamma=self.config.algorithm.gamma,
-            lam=self.config.algorithm.lam,
-            num_repeat=self.config.actor_rollout_ref.rollout.n,
-            norm_adv_by_std_in_grpo=self.config.algorithm.get("norm_adv_by_std_in_grpo", True),
-            config=self.config.algorithm,
-        )
+        data = self._compute_advantage_estimates(data, batch, metrics)
 
         # 4. write nested advantages and returns back to TransferQueue
         fields = ["advantages", "returns"]
@@ -1949,6 +1940,24 @@ class PPOTrainer(ABC):
         batch = tq.kv_batch_put(keys=batch.keys, partition_id=batch.partition_id, fields=output)
 
         return batch
+
+    def _compute_advantage_estimates(self, data: DataProto, batch: KVBatchMeta, metrics: dict) -> DataProto:
+        """Fill ``advantages`` and ``returns`` of ``data`` (rows aligned with ``batch.keys``).
+
+        Hook for trainers whose credit assignment is not "one reward per session, compared within
+        the prompt": the default broadcasts each session's final-output GRPO advantage to all of
+        the session's outputs.
+        """
+        return compute_advantage_for_multi_trajectories(
+            data,
+            batch_keys=batch.keys,
+            adv_estimator=self.config.algorithm.adv_estimator,
+            gamma=self.config.algorithm.gamma,
+            lam=self.config.algorithm.lam,
+            num_repeat=self.config.actor_rollout_ref.rollout.n,
+            norm_adv_by_std_in_grpo=self.config.algorithm.get("norm_adv_by_std_in_grpo", True),
+            config=self.config.algorithm,
+        )
 
     def _update_critic(self, batch: KVBatchMeta, metrics: dict) -> KVBatchMeta:
         """Update the critic network."""

@@ -51,8 +51,14 @@ async def _settle_session_tasks(tasks: list[asyncio.Task[Any]]) -> list[BaseExce
     return [result for result in results if isinstance(result, BaseException)]
 
 
-@ray.remote
-class AgentLoopWorkerTQ(AgentLoopWorker):
+class AgentLoopWorkerTQBase(AgentLoopWorker):
+    """Plain (non-actor) TransferQueue worker.
+
+    Ray actor classes cannot be subclassed, so the implementation lives in this plain class and
+    ``AgentLoopWorkerTQ`` below is its actor form. Agent frameworks that need group-level control
+    over a prompt's sessions (e.g. ``verl.experimental.skill_loop``) subclass this one.
+    """
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         tq.init()
@@ -232,9 +238,18 @@ class AgentLoopWorkerTQ(AgentLoopWorker):
         )
 
 
+AgentLoopWorkerTQ = ray.remote(AgentLoopWorkerTQBase)
+
+
 class AgentLoopManagerTQ(AgentLoopManager):
+    # Plain worker class; subclasses override it to plug in their own ``AgentLoopWorkerTQBase``.
+    agent_loop_worker_cls: type[AgentLoopWorkerTQBase] = AgentLoopWorkerTQBase
+
     def __init__(self, *args, **kwargs):
-        self.agent_loop_workers_class = AgentLoopWorkerTQ
+        if self.agent_loop_worker_cls is AgentLoopWorkerTQBase:
+            self.agent_loop_workers_class = AgentLoopWorkerTQ
+        else:
+            self.agent_loop_workers_class = ray.remote(self.agent_loop_worker_cls)
         super().__init__(*args, **kwargs)
 
     @classmethod
